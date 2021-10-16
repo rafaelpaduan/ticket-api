@@ -21,10 +21,10 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.post('/authenticate', 'UsersController.authenticate')
+Route.post('/users', 'UsersController.create')
 
 Route.group(() => {
 
-  Route.post('/users', 'UsersController.create')
   Route.get('/users', 'UsersController.index')
 
   Route.post('/tickets', 'TicketsController.create')
